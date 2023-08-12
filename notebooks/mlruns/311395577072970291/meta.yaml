@@ -1,0 +1,6 @@
+artifact_location: file:///Users/baldita/Downloads/house_price/notebooks/mlruns/311395577072970291
+creation_time: 1689805546264
+experiment_id: '311395577072970291'
+last_update_time: 1689805546264
+lifecycle_stage: active
+name: regression_experiment

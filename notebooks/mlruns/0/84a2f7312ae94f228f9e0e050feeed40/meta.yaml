@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/baldita/Downloads/house_price/notebooks/mlruns/0/84a2f7312ae94f228f9e0e050feeed40/artifacts
+end_time: 1689805453133
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 84a2f7312ae94f228f9e0e050feeed40
+run_name: resilient-newt-298
+run_uuid: 84a2f7312ae94f228f9e0e050feeed40
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689805452176
+status: 4
+tags: []
+user_id: macbookpro

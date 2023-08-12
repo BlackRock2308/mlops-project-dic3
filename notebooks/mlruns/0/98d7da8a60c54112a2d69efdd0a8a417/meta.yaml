@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/baldita/Downloads/house_price/notebooks/mlruns/0/98d7da8a60c54112a2d69efdd0a8a417/artifacts
+end_time: 1689798394338
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 98d7da8a60c54112a2d69efdd0a8a417
+run_name: linear
+run_uuid: 98d7da8a60c54112a2d69efdd0a8a417
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689798389695
+status: 3
+tags: []
+user_id: macbookpro

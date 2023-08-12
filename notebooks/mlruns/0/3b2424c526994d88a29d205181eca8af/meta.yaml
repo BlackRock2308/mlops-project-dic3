@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/baldita/Downloads/house_price/notebooks/mlruns/0/3b2424c526994d88a29d205181eca8af/artifacts
+end_time: 1689800621569
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3b2424c526994d88a29d205181eca8af
+run_name: carefree-sloth-203
+run_uuid: 3b2424c526994d88a29d205181eca8af
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1689800621401
+status: 4
+tags: []
+user_id: macbookpro
