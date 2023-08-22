@@ -84,7 +84,15 @@ def predict_single_row(CityGroup,Type,Date):
     x['Open Date'] = Date
     #x = catFea(x) 
     X_test_scale = featureEngineering(x)
-    model = pickle.load(open(str(HOME_DIR) + '/models/bestmodel.pkl', 'rb'))
+    # Get the path to the directory where this script is located
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the path to the model file within the container
+    model_path = os.path.join(script_dir, '..', 'models', 'bestmodel.pkl')
+
+# Load the model
+    model = pickle.load(open(model_path, 'rb'))
+    # model = pickle.load(open(str(HOME_DIR) + '/models/bestmodel.pkl', 'rb'))
     return model.predict(X_test_scale)
 
 @app.route('/predict', methods=['POST'])

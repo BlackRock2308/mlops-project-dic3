@@ -4,7 +4,6 @@ FROM python:3.9
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-
 # ...
 ENV APP_VERSION "1.0" 
 # ...
@@ -25,7 +24,7 @@ COPY src /app/src
 # Copy the models directory into the container at /app/models
 COPY models /app/models
 
-# Copy the settings.py file into the container at /app
+# Copy the settings directory into the container at /app/settings
 COPY settings /app/settings
 
 # Expose the port that Flask app runs on
@@ -36,3 +35,4 @@ ENV FLASK_APP=src/api.py
 
 # Run the command to start the Flask app
 CMD ["flask", "run", "--host=0.0.0.0"]
+
