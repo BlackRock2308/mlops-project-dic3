@@ -1,0 +1,9 @@
+digest: d0d467ca
+name: dataset
+profile: '{"features_shape": [134, 36], "features_size": 4824, "features_nbytes":
+  19296}'
+schema: '{"mlflow_tensorspec": {"features": "[{\"type\": \"tensor\", \"tensor-spec\":
+  {\"dtype\": \"float32\", \"shape\": [-1, 36]}}]", "targets": null}}'
+source: '{"tags": {"mlflow.user": "dosecurity", "mlflow.source.name": "/home/dosecurity/Desktop/notebooks/notebookEnv/lib/python3.11/site-packages/ipykernel_launcher.py",
+  "mlflow.source.type": "LOCAL"}}'
+source_type: code
