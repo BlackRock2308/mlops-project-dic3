@@ -75,13 +75,17 @@ def featureEngineering(test):
 
     return X_test
 
-def predict_single_row(CityGroup,Type,Date):      
+def predict_single_row(objet):      
     x = pd.DataFrame(np.empty((0,42)))
-    x.columns = MODEL_PARAMS['FEATURES']
+    column = MODEL_PARAMS['FEATURES']
+    x.columns = column
     x.loc[len(x)] = 0
-    x['City Group'] = CityGroup
-    x['Type'] = Type
-    x['Open Date'] = Date
+    
+    for key , value in objet.items() :
+        if key in column :
+            x[key] = value
+
+
     #x = catFea(x) 
     X_test_scale = featureEngineering(x)
     # Get the path to the directory where this script is located
@@ -99,11 +103,10 @@ def predict_single_row(CityGroup,Type,Date):
 def question_answers():
 
     data = json.loads(request.data)
-    CityGroup = data['CityGroup']
-    print(CityGroup)
-    Type = data['Type']
-    Date = data['Date']
-    answer = predict_single_row(CityGroup,Type,Date)
+    print(type(data))
+    
+    
+    answer = predict_single_row(data)
     return jsonify({"revenue" : float(answer[0]) }), 200
 
 @app.route('/test', methods=['GET'])
