@@ -1,0 +1,16 @@
+artifact_uri: file:///Users/baldita/Desktop/Courses/DIC3/mlops/project/mlops-project-dic3/notebooks/mlruns/583756455649515693/dbf4d60fcdb941d2b1d68179ccaaaa8e/artifacts
+deleted_time: null
+end_time: null
+entry_point_name: ''
+experiment_id: '583756455649515693'
+lifecycle_stage: active
+run_id: dbf4d60fcdb941d2b1d68179ccaaaa8e
+run_name: 20230822_230806-house_price
+run_uuid: dbf4d60fcdb941d2b1d68179ccaaaa8e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692748967333
+status: 1
+tags: []
+user_id: macbookpro
