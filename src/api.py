@@ -115,5 +115,5 @@ def get_tests():
 
 
 if __name__ == '__main__':
-    # app.run(port=5000, use_reloader=True)
     app.run(host='0.0.0.0', port = 5000, use_reloader=True)
+    # app.run(port=5000, use_reloader=True)
