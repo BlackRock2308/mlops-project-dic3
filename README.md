@@ -13,4 +13,15 @@ https://www.canva.com/design/DAFsSi4btLI/bS_kbugGOQwD9mr6N2p0qg/edit?utm_content
 
 
 ## Lien du deploiement 
+``` http://34.135.94.93:5000/predict ```
 
+with body : 
+
+```json
+{
+    "CityGroup": "Big Cities",
+    "Type": "FC",
+    "Date": "04/12/2015"
+}
+
+```
