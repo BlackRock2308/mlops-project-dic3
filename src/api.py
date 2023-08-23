@@ -20,28 +20,32 @@ from settings.params import (DATA_DIR_INPUT,
 app = Flask(__name__)
 
 
-
 def newFeatures(df):
-  df['Date'] = pd.to_datetime(df['Open Date'],format='%m/%d/%Y')
-  df['Year'] = df['Date'].dt.year
-  df['Month'] = df['Date'].dt.month
-  df['Years Old'] = pd.to_datetime('23-03-2015', dayfirst=True).year - df['Date'].dt.year
-  df = df.drop(['Open Date','Date'],axis=1)
-  return df
+    # Drop rows where 'Open Date' is "0"
+    df = df[df['Open Date'] != "0"]
+    df['Date'] = pd.to_datetime(df['Open Date'],format='%m/%d/%Y')
+    df['Year'] = df['Date'].dt.year
+    df['Month'] = df['Date'].dt.month
+    df['Years Old'] = pd.to_datetime('23-03-2015', dayfirst=True).year - df['Date'].dt.year
+    df = df.drop(['Open Date','Date'],axis=1)
+    return df
 
 def catFea(df):
-  labelEncoding = LabelEncoder()
-  df['City Group'] = labelEncoding.fit_transform(df['City Group'].astype('str'))
-  df['Type'] = labelEncoding.fit_transform(df['Type'].astype('str'))
-  return df
+    labelEncoding = LabelEncoder()
+    df['City Group'] = labelEncoding.fit_transform(df['City Group'].astype('str'))
+    df['Type'] = labelEncoding.fit_transform(df['Type'].astype('str'))
+    return df
+
 
 def reorderingCols(test_data):
     test = test_data[['Id','City','City Group','Type','Year','Month','Years Old','P1','P2','P3','P4','P5','P6','P7','P8','P9','P10','P11','P12','P13','P14','P15','P16','P17','P18','P19','P20','P21','P22','P23','P24','P25','P26','P27','P28','P29','P30','P31','P32','P33','P34','P35','P36','P37']]
     return test
 
+
 def split_X_y(test_data):
     X_test = test_data.drop(['Id','City'],axis=1)
     return X_test
+
 
 scaler = StandardScaler()
 # transform data
@@ -111,7 +115,7 @@ def question_answers():
 
 @app.route('/test', methods=['GET'])
 def get_tests():
- return jsonify({ 'message': "test message"}), 200
+    return jsonify({ 'message': "test message"}), 200
 
 
 if __name__ == '__main__':
